@@ -1,0 +1,202 @@
+.skills {
+  padding: 6rem 2rem;
+  background: var(--bg);
+  position: relative;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  opacity: 0.3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--blue2);
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-syne), 'Syne', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--tx);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.accent {
+  background: linear-gradient(135deg, var(--blue2), var(--blue3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionDesc {
+  font-size: 1rem;
+  color: var(--tx2);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.colTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tx);
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Skill bars */
+.skillBars {
+  display: flex;
+  flex-direction: column;
+}
+
+.barsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.barItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.barHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--tx);
+}
+
+.barPercent {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue3);
+  font-family: var(--font-syne), 'Syne', sans-serif;
+}
+
+.barTrack {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--blue3));
+  border-radius: 3px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.barFill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--blue3);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--blue3);
+}
+
+/* Tech cards */
+.techGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.techCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.techCard:hover {
+  border-color: var(--bh);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.1);
+}
+
+.techIcon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.techName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--tx);
+}
+
+.techSub {
+  font-size: 0.75rem;
+  color: var(--tx2);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills { padding: 4rem 1rem; }
+  .cardsGrid { grid-template-columns: 1fr; }
+  .techCard { padding: 1rem; }
+  .barName { font-size: 0.82rem; }
+}
