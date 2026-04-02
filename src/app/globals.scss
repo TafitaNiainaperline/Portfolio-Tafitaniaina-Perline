@@ -1,0 +1,107 @@
+// ─── SCSS Variables (mirrors CSS custom properties) ───────────────────────────
+$bg:      #ffffff;
+$bg2:     #f8f8f8;
+$bg3:     #f0f0f0;
+$card:    #ffffff;
+$blue:    #e11d48;
+$blue2:   #f43f5e;
+$blue3:   #fb7185;
+$tx:      #111111;
+$tx2:     #555555;
+$tx3:     #aaaaaa;
+$border:  rgba(225, 29, 72, 0.15);
+$bh:      rgba(225, 29, 72, 0.4);
+
+// ─── CSS Custom Properties ─────────────────────────────────────────────────────
+:root {
+  --bg:     #{$bg};
+  --bg2:    #{$bg2};
+  --bg3:    #{$bg3};
+  --card:   #{$card};
+  --blue:   #{$blue};
+  --blue2:  #{$blue2};
+  --blue3:  #{$blue3};
+  --tx:     #{$tx};
+  --tx2:    #{$tx2};
+  --tx3:    #{$tx3};
+  --border: #{$border};
+  --bh:     #{$bh};
+}
+
+// ─── Reset ─────────────────────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--tx);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// ─── Scrollbar ─────────────────────────────────────────────────────────────────
+::-webkit-scrollbar {
+  width: 4px;
+
+  &-track { background: var(--bg2); }
+
+  &-thumb {
+    background: var(--blue);
+    border-radius: 2px;
+
+    &:hover { background: var(--blue2); }
+  }
+}
+
+// ─── Selection ─────────────────────────────────────────────────────────────────
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+// ─── Scroll reveal ─────────────────────────────────────────────────────────────
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ─── Base elements ─────────────────────────────────────────────────────────────
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
