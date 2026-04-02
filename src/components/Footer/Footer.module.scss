@@ -1,0 +1,96 @@
+.footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 2rem 2rem 1.5rem;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.logo {
+  font-family: var(--font-syne), 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--tx);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--blue2);
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: var(--tx2);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socialLink {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.socialLink:hover {
+  border-color: var(--bh);
+  background: rgba(225, 29, 72, 0.08);
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--tx2);
+  transition: color 0.2s;
+}
+
+.socialLink:hover .socialIcon {
+  color: var(--blue3);
+}
+
+.bottomLine {
+  max-width: 1200px;
+  margin: 1.25rem auto 0;
+  text-align: center;
+}
+
+.madeWith {
+  font-size: 0.78rem;
+  color: var(--tx3);
+}
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer { padding: 1.5rem 1rem 1rem; }
+  .logo { font-size: 1.1rem; }
+  .copy { font-size: 0.78rem; }
+}
