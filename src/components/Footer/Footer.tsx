@@ -59,11 +59,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.bottomLine}>
-        <p className={styles.madeWith}>
-          Conçu & développé avec Next.js 14 · TypeScript
-        </p>
-      </div>
     </footer>
   )
 }
