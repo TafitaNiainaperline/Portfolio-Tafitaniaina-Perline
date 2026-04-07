@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           <p className={`${styles.greeting} reveal`}>
-            Bonjour, je suis <Hand size={20} style={{ display: 'inline', verticalAlign: 'middle', color: '#e11d48' }} />
+            Bonjour, je suis <Hand size={20} style={{ display: 'inline', verticalAlign: 'middle', color: '#76D2DB' }} />
           </p>
 
           <h1 className={`${styles.name} reveal`}>
@@ -101,7 +101,6 @@ export default function Hero() {
           <div className={`${styles.photoCard} reveal`}>
             <div className={styles.photoPlaceholder}>
               <Image src="/tafita.png" alt="TAFITANIAINA Perline" fill style={{ objectFit: 'cover', borderRadius: '24px' }} />
-              <div className={styles.photoRing} />
             </div>
 
             {/* Nametag overlay */}
@@ -117,7 +116,7 @@ export default function Hero() {
           {/* Floating stat cards */}
           <div className={styles.floatCards}>
             <div className={`${styles.floatCard} ${styles.floatCard1}`}>
-              <Rocket size={22} color="#e11d48" />
+              <Rocket size={22} color="#76D2DB" />
               <div>
                 <p className={styles.floatValue}>10</p>
                 <p className={styles.floatLabel}>Projets</p>
@@ -125,7 +124,7 @@ export default function Hero() {
             </div>
 
             <div className={`${styles.floatCard} ${styles.floatCard2}`}>
-              <Clock size={22} color="#e11d48" />
+              <Clock size={22} color="#76D2DB" />
               <div>
                 <p className={styles.floatValue}>2+</p>
                 <p className={styles.floatLabel}>Ans</p>
@@ -133,7 +132,7 @@ export default function Hero() {
             </div>
 
             <div className={`${styles.floatCard} ${styles.floatCard3}`}>
-              <CheckCircle size={22} color="#e11d48" />
+              <CheckCircle size={22} color="#76D2DB" />
               <div>
                 <p className={styles.floatValue}>100%</p>
                 <p className={styles.floatLabel}>Satisfaction</p>
