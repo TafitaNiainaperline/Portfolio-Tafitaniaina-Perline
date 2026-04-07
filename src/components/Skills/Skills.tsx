@@ -6,13 +6,13 @@ import { skills, techCards } from '@/data/portfolio'
 import styles from './Skills.module.scss'
 
 const iconMap: Record<string, React.ReactNode> = {
-  Triangle: <Triangle size={24} color="#e11d48" />,
-  Atom: <Atom size={24} color="#e11d48" />,
-  Server: <Server size={24} color="#e11d48" />,
-  Hexagon: <Hexagon size={24} color="#e11d48" />,
-  FileCode: <FileCode size={24} color="#e11d48" />,
-  Database: <Database size={24} color="#e11d48" />,
-  Cloud: <Cloud size={24} color="#e11d48" />,
+  Triangle: <Triangle size={24} color="#76D2DB" />,
+  Atom: <Atom size={24} color="#76D2DB" />,
+  Server: <Server size={24} color="#76D2DB" />,
+  Hexagon: <Hexagon size={24} color="#76D2DB" />,
+  FileCode: <FileCode size={24} color="#76D2DB" />,
+  Database: <Database size={24} color="#76D2DB" />,
+  Cloud: <Cloud size={24} color="#76D2DB" />,
 }
 
 export default function Skills() {
