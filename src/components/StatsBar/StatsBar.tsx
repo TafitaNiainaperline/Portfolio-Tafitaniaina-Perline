@@ -6,10 +6,10 @@ import { stats } from '@/data/portfolio'
 import styles from './StatsBar.module.scss'
 
 const iconMap: Record<string, React.ReactNode> = {
-  Rocket: <Rocket size={22} color="#ffffff" />,
-  SmilePlus: <SmilePlus size={22} color="#ffffff" />,
-  CalendarDays: <CalendarDays size={22} color="#ffffff" />,
-  Wrench: <Wrench size={22} color="#ffffff" />,
+  Rocket: <Rocket size={22} color="#F7F6E5" />,
+  SmilePlus: <SmilePlus size={22} color="#F7F6E5" />,
+  CalendarDays: <CalendarDays size={22} color="#F7F6E5" />,
+  Wrench: <Wrench size={22} color="#F7F6E5" />,
 }
 
 function parseNumber(value: string): number {
