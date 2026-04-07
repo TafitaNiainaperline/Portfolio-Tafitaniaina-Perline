@@ -8,7 +8,7 @@
   border-bottom: 1px solid transparent;
 
   &.scrolled {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(168, 48, 48, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom-color: rgba(225, 29, 72, 0.15);
@@ -82,20 +82,20 @@
 .cta {
   flex-shrink: 0;
   padding: 0.55rem 1.25rem;
-  background: var(--blue);
-  color: #fff;
+  background: #76D2DB;
+  color: #A83030;
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 20px rgba(225, 29, 72, 0.3);
+  box-shadow: 0 0 20px rgba(118, 210, 219, 0.3);
   margin-left: 1rem;
 
   &:hover {
-    background: var(--blue2);
+    background: #F7F6E5;
     transform: translateY(-1px);
-    box-shadow: 0 0 30px rgba(225, 29, 72, 0.5);
+    box-shadow: 0 0 30px rgba(118, 210, 219, 0.5);
   }
 }
 
@@ -127,7 +127,7 @@
     top: 72px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(168, 48, 48, 0.97);
     backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: stretch;
