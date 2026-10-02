@@ -10,6 +10,8 @@ export default function Contact() {
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [serviceError, setServiceError] = useState('')
+  const [emailFallback, setEmailFallback] = useState(`mailto:${personalInfo.email}`)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,26 +33,51 @@ export default function Contact() {
     e.preventDefault()
     if (loading) return
     setError('')
+    setServiceError('')
     setSent(false)
     setLoading(true)
     const form = e.currentTarget
     const data = new FormData(form)
+    const subject = String(data.get('subject') || 'Contact depuis le portfolio')
+    const body = `Nom : ${data.get('name') || ''}\nEmail : ${data.get('email') || ''}\n\n${data.get('message') || ''}`
+    setEmailFallback(`mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`)
+    const controller = new AbortController()
+    const timeout = window.setTimeout(() => controller.abort(), 30000)
     try {
       const res = await fetch('https://formspree.io/f/mreoaqnz', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
-        signal: AbortSignal.timeout(15000),
+        signal: controller.signal,
       })
       if (res.ok) {
         setSent(true)
         form.reset()
       } else {
-        setError('Le message n’a pas pu être envoyé. Réessayez ou contactez-moi par email.')
+        const response: unknown = await res.json().catch(() => null)
+        if (response && typeof response === 'object') {
+          const result = response as { errors?: { message?: unknown }[]; error?: unknown }
+          const details = Array.isArray(result.errors)
+            ? result.errors.map((item) => item?.message).filter((message): message is string => typeof message === 'string').join(' ')
+            : typeof result.error === 'string' ? result.error : ''
+          setServiceError(details)
+        }
+        if (res.status === 429) {
+          setError('Le service d’envoi a atteint sa limite. Réessayez plus tard ou utilisez l’envoi par email ci-dessous.')
+        } else if (res.status === 404) {
+          setError('Le formulaire de contact est introuvable. Utilisez l’envoi par email ci-dessous.')
+        } else if (res.status === 401 || res.status === 403) {
+          setError('Le service d’envoi a refusé la demande. Utilisez l’envoi par email ci-dessous.')
+        } else {
+          setError(`L’envoi a échoué (code ${res.status}). Votre message est conservé ; vous pouvez réessayer.`)
+        }
       }
     } catch {
-      setError('Connexion interrompue ou délai dépassé. Votre message est conservé ; vous pouvez réessayer.')
+      setError(controller.signal.aborted
+        ? 'Le service d’envoi met trop de temps à répondre. La réception du message n’a pas pu être confirmée.'
+        : 'Impossible de joindre le service d’envoi. Votre message est conservé ; vérifiez votre connexion ou utilisez l’envoi par email.')
     } finally {
+      window.clearTimeout(timeout)
       setLoading(false)
     }
   }
@@ -207,7 +234,13 @@ export default function Contact() {
               <p role="status" aria-live="polite">
                 {loading ? 'Envoi en cours…' : sent ? 'Merci ! Votre message a bien été envoyé.' : ''}
               </p>
-              {error && <p role="alert">{error}</p>}
+              {error && (
+                <div role="alert" className={styles.errorMessage}>
+                  <p>{error}</p>
+                  {serviceError && <p className={styles.serviceError}>Réponse du service : {serviceError}</p>}
+                  <a href={emailFallback} className={styles.fallbackLink}>Ouvrir mon application email avec ce message <ArrowRight size={14} aria-hidden="true" /></a>
+                </div>
+              )}
             </form>
           </div>
         </div>

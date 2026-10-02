@@ -297,3 +297,20 @@
   .linkValue { font-size: 0.82rem; }
   .formWrap { padding: 1.25rem; }
 }
+.errorMessage {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.serviceError { margin-top: 0.5rem; }
+.fallbackLink {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  color: var(--blue2);
+  text-decoration: underline;
+}
