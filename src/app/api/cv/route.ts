@@ -10,7 +10,7 @@ export async function GET() {
     return new Response(new Uint8Array(file), {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="CV-Perline.pdf"',
+        'Content-Disposition': 'attachment; filename="CV_Perline.pdf"',
         'Content-Length': String(file.byteLength),
         'Cache-Control': 'no-store',
         'X-Content-Type-Options': 'nosniff',
