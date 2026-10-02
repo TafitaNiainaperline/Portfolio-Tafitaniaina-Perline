@@ -60,8 +60,16 @@
   span { max-width: 85px; font-size: 0.7rem; color: var(--tx2); line-height: 1.5; }
 }
 .portrait { width: min(100%, 340px); justify-self: end; position: relative; }
-.photo { position: relative; aspect-ratio: 4 / 5; border-radius: 100px 100px 16px 16px; overflow: hidden; background: #e9e4db; border: 1px solid var(--border); }
-.photoImage { object-fit: cover; }
+.photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 160px 160px 24px 24px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 35%, #f7ecee 0%, #efe1e3 55%, #e9e4db 100%);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 45px -24px rgba(105, 35, 48, 0.35);
+}
+.photoImage { object-fit: contain; object-position: center bottom; filter: drop-shadow(0 8px 12px rgba(70, 30, 40, 0.12)); }
 .caption { display: flex; align-items: center; gap: 0.85rem; padding-top: 1rem; p { font-size: 0.78rem; font-weight: 700; } div > span { color: var(--tx2); font-size: 0.7rem; } }
 .captionMark { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 9px; background: #efe1e3; color: var(--blue); font-weight: 700; font-size: 0.85rem; }
 @media (max-width: 850px) {

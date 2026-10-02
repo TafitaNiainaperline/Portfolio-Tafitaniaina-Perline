@@ -31,7 +31,7 @@ export default function Hero() {
         </div>
         <div className={styles.portrait}>
           <div className={styles.photo}>
-            <Image src="/tafita.png" alt="Portrait de TAFITANIAINA Perline" fill priority sizes="(max-width: 600px) 260px, (max-width: 850px) 320px, 340px" className={styles.photoImage} />
+            <Image src="/tafita-profile.png" alt="Portrait de TAFITANIAINA Perline" fill priority sizes="(max-width: 600px) 260px, (max-width: 850px) 320px, 340px" className={styles.photoImage} />
           </div>
           <div className={styles.caption}>
             <span className={styles.captionMark} aria-hidden="true">&lt;/&gt;</span>
