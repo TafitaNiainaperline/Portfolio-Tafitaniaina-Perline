@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ecoles",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: ui-mockup. Asset type: portfolio project preview image. Create one clean flat front-facing desktop web application interface mockup for \"Gestion d’écoles\". Wide 16:9 composition. White and very pale grey interface, restrained professional rounded cards, thin borders, clear sans-serif typography, crisp readable French text, narrow sidebar on left and spacious main content on right. Sidebar: Tableau de bord, Élèves, Classes, Notifications. Main: three summary cards for pupils, classes and SMS, a compact pupil table with fictional names and class levels, and a recent SMS notification panel. Cyan and navy accents. Include a small but clearly readable pill \"MAQUETTE\" in the top right header. Fictional sample data only. This is a conceptual recreation, not a real screenshot. No photographs, no 3D objects, no device frame, no perspective, no external logos, no extra background. Fill the whole image with the interface. Keep UI simple enough to read in a portfolio thumbnail.",
+    "refinement": null,
+    "asset": "public/projects/maquette-ecoles.jpg"
+  },
+  {
+    "name": "budget",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: ui-mockup. Asset type: portfolio project preview image. Create one clean flat front-facing desktop web application interface mockup for \"Gestion des documents\". Wide 16:9 composition. White and very pale grey interface, restrained professional rounded cards, thin borders, clear sans-serif typography, crisp readable French text, narrow sidebar on left and spacious main content on right. Sidebar: Tableau de bord, Documents, Ordres de route, Archives. Main: document search bar, summary cards, a neat document table with references OR-001, OR-002, OR-003, destinations Fianarantsoa and Antananarivo, date and status columns, and small PDF file icons. Blue accents. Include a small but clearly readable pill \"MAQUETTE\" in the top right header. Fictional sample data only. This is a conceptual recreation, not a real screenshot. No photographs, no 3D objects, no device frame, no perspective, no external logos, no extra background. Fill the whole image with the interface. Keep UI simple enough to read in a portfolio thumbnail.",
+    "refinement": null,
+    "asset": "public/projects/maquette-budget.jpg"
+  },
+  {
+    "name": "enquete",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: ui-mockup. Asset type: portfolio project preview image. Create one clean flat front-facing desktop web application interface mockup for \"Saisie d’enquête\". Wide 16:9 composition. White and very pale grey interface, restrained professional rounded cards, thin borders, clear sans-serif typography, crisp readable French text, narrow sidebar on left and spacious main content on right. Sidebar: Tableau de bord, Nouvelle enquête, Enquêtes, Statistiques. Main: a clear data-entry form with fields Région, Commune, Date, Type d’incident, Observations. A progress indicator and primary Enregistrer button. Adjacent compact panel showing fictional completion statistics. Teal accents. Include a small but clearly readable pill \"MAQUETTE\" in the top right header. Fictional sample data only. This is a conceptual recreation, not a real screenshot. No photographs, no 3D objects, no device frame, no perspective, no external logos, no extra background. Fill the whole image with the interface. Keep UI simple enough to read in a portfolio thumbnail.",
+    "refinement": "Use case: precise-object-edit. Edit this French survey interface mockup. Preserve the entire layout, palette, typography, form and top MAQUETTE badge. Change the subject of the incident data from environmental events to public insecurity. In form: Région = Haute Matsiatra, Commune = Fianarantsoa, Type d’incident = Vol, Observations = Signalement fictif utilisé pour la maquette. In right panel list, replace Pollution de l’eau with Vol, Atteinte à la faune with Cambriolage, Dégradation des forêts with Agression; replace their icons with simple neutral relevant icons. Keep Autre. All example data fictional. Keep everything else unchanged. No new logos or photographs.",
+    "asset": "public/projects/maquette-enquete.jpg"
+  },
+  {
+    "name": "finances",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: ui-mockup. Asset type: portfolio project preview image. Create one clean flat front-facing desktop web application interface mockup for \"Dépenses et revenus\". Wide 16:9 composition. White and very pale grey interface, restrained professional rounded cards, thin borders, clear sans-serif typography, crisp readable French text, narrow sidebar on left and spacious main content on right. Sidebar: Vue d’ensemble, Transactions, Budget, Rapports. Main: revenue, expense and balance summary cards with fictional sample amounts in Ar, elegant monthly income vs expense line chart, compact category donut chart and short transaction list. Green and indigo accents. Include a small but clearly readable pill \"MAQUETTE\" in the top right header. Fictional sample data only. This is a conceptual recreation, not a real screenshot. No photographs, no 3D objects, no device frame, no perspective, no external logos, no extra background. Fill the whole image with the interface. Keep UI simple enough to read in a portfolio thumbnail.",
+    "refinement": null,
+    "asset": "public/projects/maquette-finances.jpg"
+  }
+]

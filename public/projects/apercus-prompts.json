@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ecoles",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Remove the colored MAQUETTE pill from the top header of this interface image completely, seamlessly restore the plain header background where it was.  Preserve everything else exactly: layout, existing French labels, numbers, charts, icons, palette and framing. No replacement badge, no new text, no re-layout.",
+    "asset": "public/projects/apercu-ecoles.jpg"
+  },
+  {
+    "name": "budget",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Remove the colored MAQUETTE pill from the top header of this interface image completely, seamlessly restore the plain header background where it was.  Preserve everything else exactly: layout, existing French labels, numbers, charts, icons, palette and framing. No replacement badge, no new text, no re-layout.",
+    "asset": "public/projects/apercu-budget.jpg"
+  },
+  {
+    "name": "enquete",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Remove the colored MAQUETTE pill from the top header of this interface image completely, seamlessly restore the plain header background where it was. Also replace the observations text 'Signalement fictif utilisé pour la maquette.' with 'Exemple de signalement fictif.' so the word maquette no longer appears anywhere. Preserve everything else exactly: layout, existing French labels, numbers, charts, icons, palette and framing. No replacement badge, no new text, no re-layout.",
+    "asset": "public/projects/apercu-enquete.jpg"
+  },
+  {
+    "name": "finances",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Remove the colored MAQUETTE pill from the top header of this interface image completely, seamlessly restore the plain header background where it was.  Preserve everything else exactly: layout, existing French labels, numbers, charts, icons, palette and framing. No replacement badge, no new text, no re-layout.",
+    "asset": "public/projects/apercu-finances.jpg"
+  }
+]

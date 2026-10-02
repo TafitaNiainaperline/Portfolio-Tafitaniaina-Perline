@@ -119,7 +119,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .burger { display: flex; }
 
   .navLinks {
@@ -136,6 +136,7 @@
     border-bottom: 1px solid var(--border);
     transform: translateY(-110%);
     opacity: 0;
+    visibility: hidden;
     transition: transform 0.3s ease, opacity 0.3s ease;
     pointer-events: none;
     margin-left: 0;
@@ -143,6 +144,7 @@
     &.open {
       transform: translateY(0);
       opacity: 1;
+      visibility: visible;
       pointer-events: all;
     }
   }

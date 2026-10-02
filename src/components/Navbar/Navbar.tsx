@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './Navbar.module.scss'
 
 const navLinks = [
@@ -8,12 +8,25 @@ const navLinks = [
   { label: 'Projets', href: '#projects' },
   { label: 'Compétences', href: '#skills' },
   { label: 'Expérience', href: '#experience' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('hero')
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const burgerRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && menuOpen) {
+        setMenuOpen(false)
+        burgerRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', closeOnEscape)
+    return () => document.removeEventListener('keydown', closeOnEscape)
+  }, [menuOpen])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +45,7 @@ export default function Navbar() {
       }
     }
 
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -41,7 +55,8 @@ export default function Navbar() {
     const id = href.replace('#', '')
     const el = document.getElementById(id)
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
+      window.history.replaceState(null, '', href)
+      el.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
     }
   }
 
@@ -59,13 +74,14 @@ export default function Navbar() {
           Tafita<span>.dev</span>
         </a>
 
-        <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
+        <ul id="navigation-links" className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
           {navLinks.map((link) => {
             const section = link.href.replace('#', '')
             return (
               <li key={link.href}>
                 <a
                   href={link.href}
+                  aria-current={activeSection === section ? 'location' : undefined}
                   className={`${styles.navLink} ${
                     activeSection === section ? styles.active : ''
                   }`}
@@ -91,9 +107,13 @@ export default function Navbar() {
         </a>
 
         <button
+          ref={burgerRef}
+          type="button"
           className={styles.burger}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-expanded={menuOpen}
+          aria-controls="navigation-links"
         >
           <span className={menuOpen ? styles.burgerOpen : ''}></span>
           <span className={menuOpen ? styles.burgerOpen : ''}></span>

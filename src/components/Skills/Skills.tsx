@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Triangle, Atom, Server, FileCode, Database, Cloud, Hexagon } from 'lucide-react'
 import { skills, techCards } from '@/data/portfolio'
 import styles from './Skills.module.scss'
@@ -16,7 +16,6 @@ const iconMap: Record<string, React.ReactNode> = {
 }
 
 export default function Skills() {
-  const [barsActive, setBarsActive] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -25,7 +24,6 @@ export default function Skills() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible')
-            setBarsActive(true)
           }
         })
       },
@@ -54,23 +52,14 @@ export default function Skills() {
         <div className={styles.grid}>
           {/* Left: Skill bars */}
           <div className={`${styles.skillBars} reveal`}>
-            <h3 className={styles.colTitle}>Niveaux de maîtrise</h3>
+            <h3 className={styles.colTitle}>Compétences en pratique</h3>
             <div className={styles.barsList}>
-              {skills.map((skill, i) => (
+              {skills.map((skill) => (
                 <div key={skill.name} className={styles.barItem}>
                   <div className={styles.barHeader}>
                     <span className={styles.barName}>{skill.name}</span>
-                    <span className={styles.barPercent}>{skill.percentage}%</span>
                   </div>
-                  <div className={styles.barTrack}>
-                    <div
-                      className={styles.barFill}
-                      style={{
-                        width: barsActive ? `${skill.percentage}%` : '0%',
-                        transitionDelay: `${i * 0.1}s`,
-                      }}
-                    />
-                  </div>
+                  <p className={styles.skillExample}>{skill.example}</p>
                 </div>
               ))}
             </div>

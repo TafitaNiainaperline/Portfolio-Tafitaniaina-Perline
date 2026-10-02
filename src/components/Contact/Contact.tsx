@@ -9,6 +9,7 @@ export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null)
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,6 +29,9 @@ export default function Contact() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (loading) return
+    setError('')
+    setSent(false)
     setLoading(true)
     const form = e.currentTarget
     const data = new FormData(form)
@@ -36,11 +40,16 @@ export default function Contact() {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
+        signal: AbortSignal.timeout(15000),
       })
       if (res.ok) {
         setSent(true)
         form.reset()
+      } else {
+        setError('Le message n’a pas pu être envoyé. Réessayez ou contactez-moi par email.')
       }
+    } catch {
+      setError('Connexion interrompue ou délai dépassé. Votre message est conservé ; vous pouvez réessayer.')
     } finally {
       setLoading(false)
     }
@@ -122,7 +131,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div className={`${styles.formWrap} reveal`}>
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit} onChange={() => setSent(false)} aria-busy={loading}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label className={styles.label} htmlFor="name">
@@ -131,6 +140,7 @@ export default function Contact() {
                   <input
                     id="name"
                     name="name"
+                    autoComplete="name"
                     type="text"
                     className={styles.input}
                     placeholder="Votre nom"
@@ -144,6 +154,7 @@ export default function Contact() {
                   <input
                     id="email"
                     name="email"
+                    autoComplete="email"
                     type="email"
                     className={styles.input}
                     placeholder="votre@email.com"
@@ -183,7 +194,7 @@ export default function Contact() {
               <button
                 type="submit"
                 className={`${styles.submitBtn} ${sent ? styles.sent : ''}`}
-                disabled={loading || sent}
+                disabled={loading}
               >
                 {sent ? (
                   <>Message envoyé !</>
@@ -193,6 +204,10 @@ export default function Contact() {
                   <>Envoyer le message <Send size={16} className={styles.btnArrow} /></>
                 )}
               </button>
+              <p role="status" aria-live="polite">
+                {loading ? 'Envoi en cours…' : sent ? 'Merci ! Votre message a bien été envoyé.' : ''}
+              </p>
+              {error && <p role="alert">{error}</p>}
             </form>
           </div>
         </div>

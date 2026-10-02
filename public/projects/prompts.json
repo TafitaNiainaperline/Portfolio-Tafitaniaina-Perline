@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ecoles",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: school management: miniature school building, open book and a floating SMS notification bubble. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/ecoles.jpg"
+  },
+  {
+    "name": "paiements",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: payment transaction backend: bank card, connected transaction nodes, receipt and SMS notification bubble. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/paiements.jpg"
+  },
+  {
+    "name": "medical",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: medical management: medical folder, stethoscope and two abstract patient profile cards. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/medical.jpg"
+  },
+  {
+    "name": "documents",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: budget document management: neatly organized route-order paperwork, folders and document tray. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/documents.jpg"
+  },
+  {
+    "name": "enquete",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: survey data entry: clipboard with checkboxes, tablet and simple data collection cards. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/enquete.jpg"
+  },
+  {
+    "name": "taches",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: collaborative task management: floating kanban board, task cards and small connected abstract avatars. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/taches.jpg"
+  },
+  {
+    "name": "finances",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: personal finances dashboard: elegant bar chart, income and expense arrows, wallet and coins. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/finances.jpg"
+  },
+  {
+    "name": "covoiturage",
+    "prompt": "Use case: stylized-concept. Asset type: landscape portfolio project card illustration, 3:2 aspect ratio. Subject: local carpooling in Madagascar: compact car, two map pins and a winding route over a subtle Madagascar island silhouette. Polished cohesive miniature 3D editorial illustration with matte clay materials, warm cream background #F7F6E5, burgundy #A83030 and soft turquoise #76D2DB objects and accents. Soft studio lighting, subtle contact shadows, premium clean contemporary design. Single centered scene, main subjects in central 75% so it can crop to 16:10, generous margins. No readable text, no lettering, no logos, no watermark. Conceptual illustration, not a screenshot.",
+    "tool": "built-in image_gen",
+    "asset": "public/projects/covoiturage.jpg"
+  }
+]

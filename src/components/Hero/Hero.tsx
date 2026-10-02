@@ -70,15 +70,16 @@ export default function Hero() {
             <a href="#projects" className={styles.ctaPrimary}
               onClick={(e) => {
                 e.preventDefault()
-                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+                window.history.replaceState(null, '', '#projects')
+                document.getElementById('projects')?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
               }}
             >
               Voir mes projets
               <ArrowRight size={16} className={styles.arrow} />
             </a>
-            <a href="/cv-tafitaniaina-perline.pdf" download className={styles.ctaSecondary}>
+            <a href="/CV_Perline.pdf" download className={styles.ctaSecondary}>
               <Download size={16} />
-              Télécharger CV
+              Télécharger mon CV · PDF
             </a>
           </div>
 
@@ -100,7 +101,7 @@ export default function Hero() {
           {/* Photo card */}
           <div className={`${styles.photoCard} reveal`}>
             <div className={styles.photoPlaceholder}>
-              <Image src="/tafita.png" alt="TAFITANIAINA Perline" fill style={{ objectFit: 'cover', borderRadius: '24px' }} />
+              <Image src="/tafita.png" alt="TAFITANIAINA Perline" fill priority sizes="(max-width: 480px) 220px, (max-width: 900px) 280px, 400px" style={{ objectFit: 'cover', borderRadius: '24px' }} />
             </div>
 
             {/* Nametag overlay */}
@@ -108,7 +109,7 @@ export default function Hero() {
               <div className={styles.nametagDot} />
               <div>
                 <p className={styles.nametagName}>TAFITANIAINA Perline</p>
-                <p className={styles.nametagRole}>Développeur Fullstack</p>
+                <p className={styles.nametagRole}>Développeuse Full Stack</p>
               </div>
             </div>
           </div>

@@ -20,6 +20,11 @@ export const projects = [
   {
     id: 1,
     title: "Système de Gestion d'Écoles",
+    image: "/projects/apercu-ecoles.jpg",
+    imageAlt: "Maquette d’interface de gestion d’écoles : élèves, classes et notifications SMS",
+    isMockup: true,
+    role: "Développement frontend et backend",
+    features: ["Gestion d’écoles", "Notifications SMS"],
     tags: ["Next.js", "NestJS"],
     description: "Développement complet (frontend & backend) d'un système de gestion d'écoles avec notifications SMS.",
     demoUrl: "#",
@@ -28,6 +33,10 @@ export const projects = [
   {
     id: 2,
     title: "API Gestion Transactions Paiements",
+    image: "/ariari.mg.PNG",
+    imageAlt: "Capture de la plateforme Ariari.MG de paiements Mobile Money et notifications SMS",
+    role: "Conception et développement de l’API backend",
+    features: ["Gestion des transactions de paiement", "Notifications SMS"],
     tags: ["Next.js", "NestJS"],
     description: "Conception et développement d'une API backend de gestion des transactions de paiement avec notifications SMS.",
     demoUrl: "#",
@@ -35,15 +44,24 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Application de Gestion Médicale",
+    title: "Registre Médical",
+    image: "/regsitre%20medical.PNG",
+    imageAlt: "Nouvelle interface du Registre Médical : tableau de bord, patients, consultations et suivi de caisse",
+    role: "Conception et réalisation de l’application web",
+    features: ["Gestion des patients et consultations", "Tableau de bord et suivi de caisse"],
     tags: ["React", "Node.js"],
-    description: "Conception et réalisation d'une application web de gestion de médecins et de patients.",
+    description: "Application de gestion des registres médicaux avec suivi des patients, des consultations et de la caisse, réunis dans un tableau de bord.",
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 4,
     title: "Gestion des Documents — Budget",
+    image: "/projects/apercu-budget.jpg",
+    imageAlt: "Maquette d’interface de gestion documentaire : liste des ordres de route et archives",
+    isMockup: true,
+    role: "Conception et réalisation de l’application web",
+    features: ["Gestion documentaire", "Documents liés aux ordres de route"],
     tags: ["React", "MySQL"],
     description: "Conception et réalisation d'une application de gestion des documents liés aux ordres de route pour le Service Régional du Budget Haute Matsiatra.",
     demoUrl: "#",
@@ -52,6 +70,11 @@ export const projects = [
   {
     id: 5,
     title: "Application Saisie Enquête Insécurité",
+    image: "/projects/apercu-enquete.jpg",
+    imageAlt: "Maquette d’un formulaire de saisie d’enquête sur l’insécurité avec données fictives",
+    isMockup: true,
+    role: "Conception de l’application web",
+    features: ["Saisie des données d’enquête", "Enquête sur l’insécurité"],
     tags: ["React.js", "PHP", "MySQL"],
     description: "Conception d'une application web de saisie de l'enquête sur l'insécurité pour l'INSTAT Haute Matsiatra.",
     demoUrl: "#",
@@ -60,6 +83,9 @@ export const projects = [
   {
     id: 6,
     title: "Plateforme Gestion de Tâches",
+    image: "/taskflow.PNG",
+    imageAlt: "Capture du tableau de tâches collaboratif Taskflow",
+    features: ["Gestion de tâches", "Collaboration"],
     tags: ["React", "Node.js", "PostgreSQL"],
     description: "Plateforme de gestion de tâches collaborative avec React, Node.js et PostgreSQL.",
     demoUrl: "#",
@@ -68,6 +94,10 @@ export const projects = [
   {
     id: 7,
     title: "Dashboard Suivi Dépenses & Revenus",
+    image: "/projects/apercu-finances.jpg",
+    imageAlt: "Maquette de tableau de bord financier : dépenses, revenus et graphiques avec données fictives",
+    isMockup: true,
+    features: ["Suivi des dépenses", "Suivi des revenus"],
     tags: ["React", "Chart.js", "Firebase"],
     description: "Tableau de bord permettant de suivre les dépenses et les revenus d'un utilisateur.",
     demoUrl: "#",
@@ -76,6 +106,9 @@ export const projects = [
   {
     id: 8,
     title: "Application Covoiturage Madagascar",
+    image: "/Convoiturage.PNG",
+    imageAlt: "Capture de l’application de covoiturage et des trajets disponibles à Madagascar",
+    features: ["Covoiturage local", "Application adaptée à Madagascar"],
     tags: ["Next.js", "MongoDB"],
     description: "Application de covoiturage local adaptée à Madagascar.",
     demoUrl: "#",
@@ -84,14 +117,10 @@ export const projects = [
 ]
 
 export const skills = [
-  { name: "Next.js", percentage: 95 },
-  { name: "React.js", percentage: 92 },
-  { name: "Node.js / Express", percentage: 88 },
-  { name: "NestJS", percentage: 85 },
-  { name: "TypeScript", percentage: 85 },
-  { name: "PostgreSQL / MongoDB / MySQL", percentage: 82 },
-  { name: "MySQL", percentage: 80 },
-  { name: "Docker / CI/CD", percentage: 75 },
+  { name: "Frontend · React / Next.js", example: "Interfaces web pour la gestion d’écoles, de patients et de documents." },
+  { name: "Backend · Node.js / NestJS", example: "API de gestion des transactions de paiement et notifications SMS." },
+  { name: "Bases de données · PostgreSQL / MongoDB / MySQL", example: "Données des applications de gestion d’écoles, de patients et de documents." },
+  { name: "TypeScript", example: "Composants React et données typées dans ce portfolio Next.js." },
 ]
 
 export const techCards = [

@@ -17,9 +17,20 @@ const syne = Syne({
 })
 
 export const metadata: Metadata = {
-  title: 'Tafita.dev — Développeur Fullstack',
+  title: 'Tafita.dev — Développeuse Full Stack',
   description:
-    'Portfolio de TAFITANIAINA Perline — Développeur Fullstack Next.js · React · Node.js',
+    'Portfolio de TAFITANIAINA Perline — Développeuse Full Stack Next.js · React · NestJS',
+  openGraph: {
+    title: 'TAFITANIAINA Perline — Développeuse Full Stack',
+    description: 'Découvrez mes projets web, mes compétences et mon parcours avec React, Next.js et NestJS.',
+    type: 'website',
+    locale: 'fr_FR',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'TAFITANIAINA Perline — Développeuse Full Stack',
+    description: 'Projets web, compétences et parcours avec React, Next.js et NestJS.',
+  },
 }
 
 export default function RootLayout({
