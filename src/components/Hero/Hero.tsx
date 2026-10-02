@@ -18,7 +18,7 @@ export default function Hero() {
           <p className={styles.description}>{personalInfo.description}</p>
           <div className={styles.actions}>
             <a href="#projects" className={styles.primary}>Découvrir mes projets <ArrowUpRight size={17} aria-hidden="true" /></a>
-            <a href="/CV_Perline.pdf" download className={styles.secondary}><Download size={16} aria-hidden="true" /> Mon CV · PDF</a>
+            <a href="/api/cv" download="CV-Perline.pdf" className={styles.secondary}><Download size={16} aria-hidden="true" /> Mon CV · PDF</a>
           </div>
           <div className={styles.technologies} aria-label="Technologies principales">
             {technologies.map((technology) => <span key={technology}>{technology}</span>)}
