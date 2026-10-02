@@ -1,5 +1,5 @@
 .experience {
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   background: var(--bg2);
   position: relative;
 }
@@ -16,13 +16,13 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .sectionHeader {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
 }
 
 .sectionTag {
@@ -56,15 +56,15 @@
   font-size: 1rem;
   color: var(--tx2);
   max-width: 520px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.7;
 }
 
 /* Timeline */
 .timeline {
   position: relative;
-  max-width: 860px;
-  margin: 0 auto;
+  max-width: 920px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -76,7 +76,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #76D2DB 0%, rgba(118, 210, 219, 0.3) 60%, transparent 100%);
+  background: var(--border);
 }
 
 .timelineItem {
@@ -120,20 +120,20 @@
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--blue2);
-  box-shadow: 0 0 12px rgba(225, 29, 72, 0.4);
+  box-shadow: none;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .timelineItem:hover .dotInner {
   transform: scale(1.3);
-  box-shadow: 0 0 20px rgba(225, 29, 72, 0.7);
+  box-shadow: none;
 }
 
 .timelineCard {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 1.75rem;
+  padding: 1.35rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

@@ -1,5 +1,5 @@
 .contact {
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   background: var(--bg);
   position: relative;
 }
@@ -16,13 +16,13 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .sectionHeader {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
 }
 
 .sectionTag {
@@ -56,14 +56,14 @@
   font-size: 1rem;
   color: var(--tx2);
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.7;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -126,6 +126,7 @@
 }
 
 .linkValue {
+  overflow-wrap: anywhere;
   font-size: 0.9rem;
   color: var(--tx);
   font-weight: 600;
@@ -154,17 +155,17 @@
   border-radius: 100px;
   font-size: 0.82rem;
   font-weight: 500;
-  color: #76D2DB;
+  color: #47685b;
   width: fit-content;
 }
 
 .availDot {
   width: 8px;
   height: 8px;
-  background: #76D2DB;
+  background: #47685b;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.25);
-  animation: pulse 2s ease-in-out infinite;
+  box-shadow: none;
+  animation: none;
   flex-shrink: 0;
 }
 
@@ -178,7 +179,7 @@
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 1.75rem;
 }
 
 .form {
@@ -245,7 +246,7 @@
   border: none;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 24px rgba(225, 29, 72, 0.3);
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,9 +256,9 @@
 }
 
 .submitBtn:hover:not(:disabled) {
-  background: var(--blue2);
+  background: #692330;
   transform: translateY(-2px);
-  box-shadow: 0 0 36px rgba(225, 29, 72, 0.5);
+  box-shadow: none;
 }
 
 .submitBtn:disabled {
@@ -266,8 +267,8 @@
 }
 
 .submitBtn.sent {
-  background: #9b1235;
-  box-shadow: 0 0 24px rgba(225, 29, 72, 0.3);
+  background: #47685b;
+  box-shadow: none;
 }
 
 .btnArrow {
