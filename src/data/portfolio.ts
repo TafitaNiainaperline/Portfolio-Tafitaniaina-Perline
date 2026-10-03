@@ -44,7 +44,7 @@ export const projects = [
   {
     id: 3,
     title: "Registre Médical",
-    image: "/regsitre%20medical.PNG",
+    image: "/Tableau%20de%20regsitre%20medical.PNG",
     imageAlt: "Nouvelle interface du Registre Médical : tableau de bord, patients, consultations et suivi de caisse",
     role: "Conception et réalisation de l’application web",
     features: ["Gestion des patients et consultations", "Tableau de bord et suivi de caisse"],
@@ -79,7 +79,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Plateforme Gestion de Tâches",
+    title: "Tableau Kanban de conception web",
     image: "/Tableau%20Kanban%20de%20conception%20web.png",
     imageAlt: "Capture du tableau Kanban de conception web pour la gestion des tâches",
     features: ["Gestion de tâches", "Collaboration"],
